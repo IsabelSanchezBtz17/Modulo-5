@@ -1,0 +1,77 @@
+<h1>Ejercicio</h1>
+
+<ul>
+    <li>
+        <a routerLink="/authLazy/login">
+            Ir a login
+        </a>
+    </li>
+
+    <li>
+        <a routerLink="/authLazy/enroll">
+            Ir a registro
+        </a>
+
+    </li>
+
+    <li>
+        <a routerLink="/pokedex">
+            Pokedex
+        </a>
+    </li>
+
+    <li>
+        <a routerLink="/pokedex/add">
+            Agregar
+        </a>
+    </li>
+
+    <li>
+        <a routerLink="/pokedex/edit/1">
+            Editar
+        </a>
+    </li>
+
+    <li>
+        <a routerLink="/pokedex/find">
+            Buscar
+        </a>
+    </li>
+    <li>
+        <a routerLink="/pokedex/list">
+            Lista
+        </a>
+    </li>
+    <li>
+        <a routerLink="/pokedex/pokemon/1">
+            Pokemon
+        </a>
+    </li>
+
+</ul>
+
+<p>
+    Seccion: {{showSeccion()}}
+</p>
+
+<div>
+    <form [formGroup]=" loginForm" (submit)="onSubmit()">
+        <label>Nombre: </label>
+
+
+        <input name="name" type="text" formControlName="username">
+        <br>
+        <label>Password:</label>
+
+        <input name="password" type="text" formControlName="password">
+
+        <br>
+        <button role="submit" type="submit">Ingresar</button>
+
+        <button (click)="logout()">
+            logout
+        </button>
+    </form>
+
+    <p> {{respuesta}}</p>
+</div>
